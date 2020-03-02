@@ -68,7 +68,7 @@ public class addNoteActivity extends AppCompatActivity {
             dbHelper.saveNotes(username, title, newNote.getText().toString(), date);
         } else { //update note
             title = "Note_" + (noteid + 1);
-            dbHelper.updateNote(title, date, newNote.getText().toString(), username);
+            dbHelper.updateNote(username, title, newNote.getText().toString(), date);
         }
 
         // 6. go to welcome activity using intents.
