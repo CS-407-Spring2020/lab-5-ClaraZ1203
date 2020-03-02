@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
     public static String usernameKey= "username";
 
     public void loginOnclick(View view) {
+        //1. get username and password via EditText view
         EditText myTextView = (EditText) findViewById(R.id.text_username);
         String username = myTextView.getText().toString();
         goToActivity(username);
 
-        //1. get username and password via EditText view
         //2. add username to sharedPreferences object
         SharedPreferences sharedPreferences = getSharedPreferences("c.sakshi.lab5", Context.MODE_PRIVATE);
         sharedPreferences.edit().putString("username", username).apply();
