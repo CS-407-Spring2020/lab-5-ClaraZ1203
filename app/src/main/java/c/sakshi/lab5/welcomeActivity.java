@@ -3,7 +3,9 @@ package c.sakshi.lab5;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -38,6 +40,8 @@ public class welcomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.item_logout:
                 Intent intent = new Intent(this, MainActivity.class);
+                SharedPreferences sharedPreferences = getSharedPreferences("c.sakshi.lab5", Context.MODE_PRIVATE);
+                sharedPreferences.edit().remove(MainActivity.usernameKey).apply();
                 startActivity(intent);
                 return true;
             case R.id.item_addNote:
