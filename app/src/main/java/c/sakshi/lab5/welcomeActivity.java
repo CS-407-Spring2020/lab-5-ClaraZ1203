@@ -40,6 +40,8 @@ public class welcomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.item_addNote:
+                return true;
             default: return super.onOptionsItemSelected(item);
         }
     }
