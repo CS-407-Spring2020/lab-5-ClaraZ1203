@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             // "username" key exists in SharedPreferences object which means that a user was logged in before the app closed.
             // get the name of that user from SharedPreferences using sharedPreferences.getString(usernameKey, "").
             // use intent to start the second activity welcoming the user
-            String s = sharedPreferences.getString(usernameKey, "");
+            String s = sharedPreferences.getString(usernameKey, ""); //question
             Intent intent = new Intent(this, welcomeActivity.class);
             intent.putExtra("message", s);
             startActivity(intent);
